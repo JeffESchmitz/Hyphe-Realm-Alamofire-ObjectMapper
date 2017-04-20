@@ -118,7 +118,7 @@ class Album: Object, Mappable, Meta {
     title <- map["title"]
     genre <- map["genre"]
     albumName <- map["albumName"]
-//    let information = Mapper<Track>().mapArray(map["tracks"].currentValue)
+    //    let information = Mapper<Track>().mapArray(map["tracks"].currentValue)
     let information = Mapper<Track>().mapArray(JSONObject: map["tracks"].currentValue)
     if let information = information {
       tracks.append(objectsIn: information)
